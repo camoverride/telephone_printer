@@ -9,6 +9,9 @@ def print_text(text, newline=True):
     # Enable print permissions
     os.system("sudo chmod 777 /dev/usb/lp0")
 
+    # Purge non-ASCII
+    text = ''.join(char for char in text if ord(char) < 128)
+
     text_lines = text.split("\n")
 
     for line in text_lines:
