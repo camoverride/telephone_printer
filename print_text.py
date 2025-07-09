@@ -12,6 +12,9 @@ def print_text(text, newline=True):
     # Purge non-ASCII
     text = ''.join(char for char in text if ord(char) < 128)
 
+    # Purge quotes.
+    text = text.replace("'", "").replace('"', '')
+
     text_lines = text.split("\n")
 
     for line in text_lines:
