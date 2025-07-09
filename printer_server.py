@@ -36,7 +36,7 @@ if __name__ == "__main__":
             debug=True)
 
 """
-curl -X POST http://localhost:5000/print \
+curl -X POST http://100.114.191.58:5000/print \
   -H "Content-Type: application/json" \
   -d '{"text":"Hello World"}'
 """

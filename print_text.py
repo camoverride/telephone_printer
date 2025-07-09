@@ -9,16 +9,11 @@ def print_text(text, newline=True):
     # Enable print permissions
     os.system("sudo chmod 777 /dev/usb/lp0")
 
-    # If it's just a string, print it.
-    if type(text) == str:
-        os.system(f"sudo echo -e {text} > /dev/usb/lp0")
+    text_lines = text.split("\n")
+
+    for line in text_lines:
+        os.system(f"sudo echo -e {line} > /dev/usb/lp0")
         time.sleep(0.1)
-    
-    # If it's a list of stuff, print each as individual lines.
-    elif type(text) == list:
-        for line in text:
-            os.system(f"sudo echo -e {line} > /dev/usb/lp0")
-            time.sleep(0.1)
 
     # Optional newline.
     if newline:
