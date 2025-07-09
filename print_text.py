@@ -19,6 +19,10 @@ def print_text(text, newline=True):
     if newline:
         os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
         time.sleep(0.1)
+        os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
+        time.sleep(0.1)
+        os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
+        time.sleep(0.1)
 
     # Pause so printer doesn't overload.
     time.sleep(0.1)
