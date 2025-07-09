@@ -14,7 +14,7 @@ If it's your first time using a particular Pi:
 - `cd telephone_printer`
 - `python3 -m venv .venv`
 - `source .venv/bin/activate`
-- `pip install -r requirements.txt`
+<!-- - `pip install -r requirements.txt` -->
 
 Install [cmake](https://lindevs.com/install-cmake-on-raspberry-pi/):
 
@@ -40,11 +40,11 @@ Get CUPS up and running [link](https://cdn-learn.adafruit.com/downloads/pdf/netw
 
 Set the printer name:
 
-- `cd ../face_yourself`
+- `cd ../telephone_printer`
 - `lpadmin -p face_printer -v usb://POS58/Printer?serial=FMD072`
 - `lpadmin -p face_printer -E -m zjiang/ZJ-58.ppd`
 - `cupsenable face_printer`
-
+<!-- 
 Test print an image (if one exists):
 - `sudo lp -d face_printer _face.jpg`
 
@@ -119,4 +119,4 @@ Configure a read-only overlay filesystem (write temp files to RAM)
 
 
 
-- [ ] condense and harmonize all utils (modules beginning with an underscore `_`).
+- [ ] condense and harmonize all utils (modules beginning with an underscore `_`). -->
