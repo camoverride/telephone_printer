@@ -1,0 +1,15 @@
+[Unit]
+Description=run printer service
+After=default.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/pi/telephone_printer
+ExecStart=/home/pi/telephone_printer/.venv/bin/python /home/pi/telephone_printer/printer_server.py
+StandardOutput=journal
+StandardError=journal
+Environment="PATH=/home/pi/telephone_printer/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+[Install]
+WantedBy=default.target
