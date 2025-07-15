@@ -49,6 +49,13 @@ Set the printer name:
 
 - `python print_text.py`
 
+- Find the IP address (see below) and test with a curl request.
+```
+curl -X POST http://10.247.175.223:5000/print \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Hello World"}'
+```
+
 
 ## Run
 
@@ -63,7 +70,7 @@ Start the service using the commands below:
 - `systemctl --user enable printer.service`
 - `systemctl --user start printer.service`
 
-Check the status: `systemctl --user status printer.service`
+Check the status: `systemctl --user status printer.service`. This will also show you the IP address.
 
 Start it on boot: `sudo loginctl enable-linger pi`
 
