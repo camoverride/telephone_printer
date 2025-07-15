@@ -29,11 +29,12 @@ def print_text(text, newline=True):
 
     # Ending text
     os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
-    os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
-    os.system(f"sudo echo -e '------thanks for visiting!------' > /dev/usb/lp0")
+    time.sleep(0.1)
     os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
     time.sleep(0.1)
-
+    os.system(f"sudo echo -e '------thanks for visiting!------' > /dev/usb/lp0")
+    time.sleep(0.1)
+    os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
     # Pause so printer doesn't overload.
     time.sleep(0.1)
 
