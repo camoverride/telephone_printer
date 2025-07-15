@@ -23,20 +23,23 @@ def print_text(text, newline=True):
 
     # Optional newline.
     if newline:
-        for _ in range(10):
+        for _ in range(5):
             os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
             time.sleep(0.1)
 
-    # # Ending text
-    # os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
-    # time.sleep(0.1)
+    # Ending text
+    os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
+    time.sleep(0.1)
+    os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
+    time.sleep(0.1)
+    os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
+    time.sleep(0.1)
+
     # os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
     # time.sleep(0.1)
     # os.system(f"sudo echo -e '------thanks for visiting!------' > /dev/usb/lp0")
     # time.sleep(0.1)
     # os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
-    # Pause so printer doesn't overload.
-    time.sleep(0.1)
 
 
 if __name__ == "__main__":
