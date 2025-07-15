@@ -1,8 +1,11 @@
 # Printer
 
+Exposes a simple print server meant to be integrated with the [telephone project](https://github.com/camoverride/telephone).
 
 
 ## Hardware requirements
+
+Raspberry Pi 5 (8GB) and a NT-5890-K type thermal printer.
 
 
 ## Install
@@ -98,3 +101,9 @@ Set up periodic reboots (cron job):
 - add `0 0 * * * /sbin/reboot`
 
 Configure a read-only overlay filesystem (write temp files to RAM)
+
+
+## TODO
+
+- [ ] not all requirements are necessary! Purge!
+- [ ] print function needs to be improved: footer, trailing space, etc.
