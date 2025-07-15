@@ -55,19 +55,19 @@ Set the printer name:
 Start a service with *systemd*. This will start the program when the computer starts and revive it when it dies:
 
 - `mkdir -p ~/.config/systemd/user`
-- `cat printing.service > ~/.config/systemd/user/printing.service`
+- `cat printer.service > ~/.config/systemd/user/printer.service`
 
 Start the service using the commands below:
 
 - `systemctl --user daemon-reload`
-- `systemctl --user enable printing.service`
-- `systemctl --user start printing.service`
+- `systemctl --user enable printer.service`
+- `systemctl --user start printer.service`
 
-Check the status: `systemctl --user status printing.service`
+Check the status: `systemctl --user status printer.service`
 
 Start it on boot: `sudo loginctl enable-linger pi`
 
-Get the logs: `journalctl --user -u printing.service`
+Get the logs: `journalctl --user -u printer.service`
 
 
 ## Printer commands
