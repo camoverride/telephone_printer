@@ -17,6 +17,10 @@ def print_text(text, newline=True):
 
     text_lines = text.split("\n")
 
+    # Starting empty line
+    os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
+    time.sleep(0.1)
+
     for line in text_lines:
         os.system(f"sudo echo -e {line} > /dev/usb/lp0")
         time.sleep(0.1)
