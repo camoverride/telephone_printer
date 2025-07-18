@@ -34,6 +34,11 @@ def print_text(text, newline=True):
     # Ending text
     os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
     time.sleep(0.1)
+    os.system(f"sudo echo -e '-------futurearts.co/tbl--------' > /dev/usb/lp0")
+    time.sleep(0.1)
+    os.system(f"sudo echo -e '--------------------------------' > /dev/usb/lp0")
+    time.sleep(0.1)
+
     os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
     time.sleep(0.1)
     os.system(f"sudo echo -e ' ' > /dev/usb/lp0")
